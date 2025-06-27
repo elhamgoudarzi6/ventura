@@ -1,0 +1,343 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: "IranYekan";
+  src: url("/assets/fonts/IranYekan.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "logo";
+  src: url("/assets/fonts/Lexend.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "primary";
+  src: url("/assets/fonts/IranSans.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+:root {
+  --background: #fff;
+  --foreground: #171717;
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+/* 
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+} */
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  direction: rtl;
+  font-family: primary;
+  
+}
+
+
+
+.hexagon {
+  clip-path: polygon(25% 6.7%, 75% 6.7%,
+      100% 50%, 75% 93.3%,
+      25% 93.3%, 0% 50%);
+}
+
+.hexagon-bar {
+  clip-path: polygon(7% 0%,
+      /* بالا چپ */
+      95% 0%,
+      /* بالا راست */
+      100% 50%,
+      /* راست وسط */
+      95% 100%,
+      /* پایین راست */
+      7% 100%,
+      /* پایین چپ */
+      0% 50%
+      /* چپ وسط */
+    );
+}
+
+.hexagon-img {
+  clip-path: polygon(10% 0%,
+      /* بالا چپ */
+      90% 0%,
+      /* بالا راست */
+      100% 50%,
+      /* راست وسط */
+      90% 100%,
+      /* پایین راست */
+      10% 100%,
+      /* پایین چپ */
+      0% 50%
+      /* چپ وسط */
+    );
+}
+
+@layer base {
+  @keyframes fade-in-down {
+    0% {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes slide-in-up {
+    0% {
+      opacity: 0;
+      transform: translateY(40px);
+    }
+
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes slide-in-down {
+    0% {
+      opacity: 0;
+      transform: translateY(-40px);
+    }
+
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-fade-in-down {
+    animation: fade-in-down 0.7s ease-out both;
+  }
+
+  .animate-slide-in-up {
+    animation: slide-in-up 0.7s ease-out both;
+  }
+
+  .animate-slide-in-down {
+    animation: slide-in-down 0.7s ease-out both;
+  }
+
+  @keyframes fade-show {
+    0% {
+      opacity: 0.4;
+    }
+
+    100% {
+      opacity: 1;
+    }
+  }
+
+  .animate-fade-show {
+    animation: fade-show 1s ease-in-out;
+  }
+
+  @keyframes spin3D {
+    0% {
+      transform: perspective(1000px) rotateY(0deg);
+    }
+
+    100% {
+      transform: perspective(1000px) rotateY(360deg);
+    }
+  }
+
+  .animate-spin3D {
+    animation: spin3D 20s linear infinite;
+  }
+
+
+  @keyframes spin {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  .animate-spin {
+    animation: spin 1s linear infinite;
+  }
+
+  @keyframes ping {
+
+    75%,
+    100% {
+      transform: scale(1);
+      opacity: 0;
+    }
+  }
+
+  .animate-ping {
+    animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+  }
+
+  @keyframes pulse {
+    50% {
+      opacity: 0.5;
+    }
+  }
+
+  .animate-pulse {
+    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+
+  @keyframes bounce {
+
+    0%,
+    100% {
+      transform: translateY(-25%);
+      animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+    }
+
+    50% {
+      transform: none;
+      animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+    }
+  }
+
+  .animate-bounce {
+    animation: bounce 1s infinite;
+  }
+
+
+  @keyframes custom-ping {
+
+    75%,
+    100% {
+      transform: scale(1.1);
+      opacity: 0;
+    }
+  }
+
+  .animate-custom-ping {
+    animation: custom-ping 1.5s cubic-bezier(0, 0, 0.7, 1) infinite;
+  }
+
+
+
+  @keyframes typing {
+    0% {
+      width: 0ch;
+    }
+
+    50% {
+      width: 30ch;
+    }
+
+    100% {
+      width: 0ch;
+    }
+  }
+
+  @keyframes blink-caret {
+
+    0%,
+    100% {
+      border-color: transparent;
+    }
+
+    50% {
+      border-color: black;
+    }
+  }
+
+  .animate-typing {
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    animation:
+      typing 4s steps(10) infinite,
+      blink-caret 0.75s step-end infinite;
+  }
+
+  @keyframes waveMove {
+    0% {
+      transform: translateX(0);
+    }
+
+    100% {
+      transform: translateX(40px);
+    }
+  }
+
+  .animate-waveMove {
+    animation: waveMove 2s linear infinite;
+  }
+
+  @keyframes marquee {
+    0% {
+      transform: translateX(-100%);
+    }
+
+    50% {
+      transform: translateX(0);
+    }
+
+    100% {
+      transform: translateX(100%);
+    }
+  }
+
+  .animate-marquee {
+    animation: marquee 20s linear infinite;
+  }
+
+
+  @keyframes scroll-down {
+    0% {
+      transform: translateY(-50%);
+    }
+
+    100% {
+      transform: translateY(0%);
+    }
+  }
+
+  @keyframes scroll-up {
+    0% {
+      transform: translateY(0%);
+    }
+
+    100% {
+      transform: translateY(-50%);
+    }
+  }
+
+  .scroll-down {
+    animation: scroll-down 70s linear infinite;
+  }
+
+  .scroll-up {
+    animation: scroll-up 70s linear infinite;
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
