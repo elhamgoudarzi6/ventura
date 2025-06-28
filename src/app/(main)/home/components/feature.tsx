@@ -1,4 +1,4 @@
-// app/features/page.tsx
+
 import { Sparkles, ShieldCheck, Rocket, Users } from 'lucide-react';
 
 const features = [
@@ -35,9 +35,9 @@ export default function FeaturesPage() {
           </p>
         </div>
 
-        <div className="grid sm:grid-cols-2 gap-8">
+        <div className="grid sm:grid-cols-2 gap-5">
           {features.map((feature, idx) => (
-            <div key={idx} className="bg-white rounded-xl p-6 border border-gray-300 shadow-lg hover:shadow-xl transition">
+            <div key={idx} className="bg-white rounded-xl p-5 border border-gray-300 shadow-lg hover:shadow-xl transition">
               <div className="flex items-center gap-4 mb-3">
                 <div className="bg-[#15c4ae] text-[#06174c] p-3 rounded-full">
                   {feature.icon}

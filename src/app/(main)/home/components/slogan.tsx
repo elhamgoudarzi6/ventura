@@ -1,12 +1,13 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 
 export default function Slogan() {
   return (
-    <section className="relative bg-[#06174c] text-white py-20 px-6 text-center overflow-hidden">
-      <div className="max-w-3xl mx-auto z-10 relative">
-        <motion.h2 className="text-3xl md:text-5xl font-extrabold leading-tight mb-6"
+    <section className="relative bg-[#06174c] text-white py-24 px-6 text-center overflow-hidden">
+      <div className=" mx-auto z-10 relative">
+        <motion.h2 className="text-3xl md:text-5xl font-extrabold leading-tight mb-16"
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: 'easeOut' }}
@@ -15,15 +16,9 @@ export default function Slogan() {
           <span className="text-[#15c4ae]">سرمایه‌های هوشمند</span> می‌رسند.
         </motion.h2>
 
-        <motion.p
-          className="text-lg md:text-xl text-gray-200 max-w-2xl mx-auto"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.9, ease: 'easeOut', delay: 0.2 }}
-          viewport={{ once: true }}
-        >
-          ونچـــرا پلی است بین استارتاپ‌های خلاق و سرمایه‌گذاران آینده نگر
-        </motion.p>
+        <Link href="request" className="bg-[#15c4ae] text-[#06174c] text-md px-10 py-3 rounded-full font-semibold" >
+          همین حالا اقدام کن
+        </Link>
       </div>
     </section>
   );

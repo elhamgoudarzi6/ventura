@@ -21,11 +21,11 @@ const Hero = () => {
             ما به استارتاپ‌های بلندپرواز کمک می‌کنیم تا با جذب سرمایه، مسیر رشد خود را هموار کنند.
           </p>
           <div className="flex flex-col md:flex-row justify-start items-center text-center gap-5 px-10 md:px-0 mt-10">
-            <Link href="/about" prefetch className="bg-[#15c4ae] text-[#06174c] px-6 py-3 rounded-full w-full md:w-1/3 font-semibold transition">
-              رزرو جلسه رایگان
+            <Link href="request" prefetch className="bg-[#15c4ae] text-[#06174c] px-6 py-3 rounded-full w-full md:w-1/3 font-semibold transition">
+              مشاوره رایگان
             </Link>
-            <Link href="/about" prefetch className="border border-[#15c4ae] text-[#15c4ae] px-6 py-3 rounded-full w-full md:w-1/3 hover:bg-[#15c4ae]/10 transition">
-              درباره ما
+            <Link href="about" prefetch className="border border-[#15c4ae] text-[#15c4ae] px-6 py-3 rounded-full w-full md:w-1/3 hover:bg-[#15c4ae]/10 transition">
+            دریافت کاتالوگ
             </Link>
           </div>
         </motion.div>

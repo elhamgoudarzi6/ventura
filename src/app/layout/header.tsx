@@ -2,88 +2,65 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { Check, DollarSign,FileText, Lightbulb, Menu, X } from "lucide-react";
 import { Drawer } from "@mui/material";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import { useTheme } from "@mui/material/styles";
 import Image from "next/image";
 
+import {
+  Menu, X,
+  Lightbulb,
+  BarChart2,
+  BookText,
+  Clipboard,
+  FileText,
+  Handshake,
+  Layers3,
+  LayoutDashboard,
+  Presentation,
+  Scale,
+  ScrollText,
+  ShieldCheck,
+  Users,
+  DollarSign,
+  Table,
+} from 'lucide-react';
 
-const submenuData = [
+const megaMenu = [
   {
-    title: "مشاوره کسب و کار",
-    description: "مشاوره‌های ما، مسیر رشد کسب‌وکارتان را هدفمند می‌سازد.",
+    title: 'مشاوره کسب‌وکار',
     icon: Lightbulb,
-    href: "#",
+    children: [
+      { title: 'راه‌اندازی استارتاپ', icon: Layers3, href: '#' },
+      { title: 'توسعه مدل کسب‌وکار', icon: LayoutDashboard, href: '#' },
+      { title: 'شراکت و هم‌بنیان‌گذاری', icon: Users, href: '#' },
+      { title: 'حاکمیت شرکتی', icon: ShieldCheck, href: '#' },
+      { title: 'مشاوره حقوقی', icon: Scale, href: '#' },
+    ],
   },
   {
-    title: "راه‌اندازی استارتاپ",
-    description: "از شکل‌گیری ایده تا اجرای موفق با نقشه راه دقیق و راهنمایی گام‌به‌گام",
-    icon: Check,
-    href: "#",
-  },
-  {
-    title: "توسعه مدل کسب‌وکار",
-    description: "کمک به طراحی و تست مدل درآمدی پایدار با تمرکز بر ارزش پیشنهادی",
-    icon: Check,
-    href: "#",
-  },
-  {
-    title: "شراکت و هم‌بنیان‌گذاری",
-    description: "ساختار شفاف و توافق‌نامه‌های اصولی برای مؤسسان جهت حفظ تعادل و رشد",
-    icon: Check,
-    href: "#",
-  },
-  {
-    title: "مشاوره جذب سرمایه",
-    description: "سرمایه‌گذاری فقط پول نیست، بلکه شراکت هوشمندانه است.",
+    title: 'مشاوره جذب سرمایه',
     icon: DollarSign,
-    href: "#",
+    children: [
+      { title: 'انتخاب روش تأمین مالی', icon: DollarSign, href: '#' },
+      { title: 'آماده‌سازی برای ارائه به سرمایه‌گذار', icon: Presentation, href: '#' },
+      { title: 'مدل‌سازی مالی', icon: BarChart2, href: '#' },
+      { title: 'ساختار توافق و مذاکره', icon: Handshake, href: '#' },
+      { title: 'قراردادهای سرمایه‌گذاری', icon: ScrollText, href: '#' },
+    ],
   },
   {
-    title: "انتخاب روش تأمین مالی",
-    description: "بدهی یا سهام؟ بهترین گزینه برای شما کدام است؟",
-    icon: Check,
-    href: "#",
-  },
-  {
-    title: "آماده‌سازی برای ارائه به سرمایه‌گذار",
-    description: "ساختاردهی ارائه و پاسخ به سوالات کلیدی",
-    icon: Check,
-    href: "#",
-  },
-  {
-    title: "مدل‌سازی مالی",
-    description: "پیش‌بینی دقیق درآمد، هزینه و سود",
-    icon: Check,
-    href: "#",
-  },
-  {
-    title: "آماده سازی مستندات",
-    description: " مستندات حرفه‌ای و دقیق، اولین گام جلب اعتماد سرمایه‌گذاران است.",
+    title: 'آماده‌سازی مستندات',
     icon: FileText,
-    href: "#",
-  },
-  {
-    title: "Pitch Deck",
-    description: "طراحی حرفه‌ای فایل ارائه برای جلسات سرمایه‌گذاری",
-    icon: Check,
-    href: "#",
-  },
-  {
-    title: "Financial Projection",
-    description: "پیش‌بینی مالی با جزئیات چندساله",
-    icon: Check,
-    href: "#",
-  },
-  {
-    title: "Cap Table",
-    description: "جدول سهام‌داری شفاف و دقیق",
-    icon: Check,
-    href: "#",
+    children: [
+      { title: 'فایل ارائه به سرمایه گذار (Pitch Deck)', icon: Presentation, href: '#' },
+      { title: 'پیش بینی های مالی (Financial Projection)', icon: BarChart2, href: '#' },
+      { title: 'جدول سهامداری (Cap Table)', icon: Table, href: '#' },
+      { title: 'طرح کسب و کار (Business Plan)', icon: Clipboard, href: '#' },
+      { title: 'طرح توجیهی کسب و کار (Feasibility Study)', icon: BookText, href: '#' },
+    ],
   },
 ];
-
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -109,25 +86,31 @@ const Header = () => {
 
           {/* Mega Menu */}
           <div className="relative group">
-            <button className="cursor-pointer px-4 py-1 hover:underline underline-offset-15 decoration-[#15c4ae] decoration-1 transition">
+            <button className="cursor-pointer px-4 py-1 hover:underline underline-offset-8 decoration-[#15c4ae] decoration-2 transition">
               خدمات
             </button>
 
-            <div className="absolute left-1/2 -translate-x-1/2 top-full mt-4 w-[850px] rounded-xl shadow-xl bg-white text-gray-900 opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-all duration-300 z-50">
-              <div className="grid grid-cols-3 gap-7 p-10">
-                {Array.from({ length: Math.ceil(submenuData.length / 4) }).map((_, colIndex) => (
-                  <div key={colIndex} className="space-y-4">
-                    {submenuData
-                      .slice(colIndex * 4, colIndex * 4 + 4)
-                      .map((item, i) => (
-                        <Link key={i} href={item.href} className="flex gap-3 items-start hover:text-[#15c4ae]">
-                          <item.icon className="w-6 h-6 max-w-6 max-h-6 mt-1 text-[#15c4ae] shrink-0" />
-                          <div>
-                            <div className="font-bold text-[#15c4ae] mb-1">{item.title}</div>
-                            <p className="text-sm text-gray-600">{item.description}</p>
-                          </div>
-                        </Link>
-                      ))}
+            <div className="absolute left-1/2 -translate-x-1/2 top-full mt-4 w-[860px] rounded-xl shadow-xl bg-white text-gray-900 opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-all duration-300 z-50">
+              <div className="grid grid-cols-3 gap-6 p-8">
+                {megaMenu.map((column, index) => (
+                  <div key={index} className="space-y-4">
+                    {/* عنوان اصلی ستون */}
+                    <div className="flex items-center gap-2 border-b border-gray-200 pb-2 mb-2">
+                      <column.icon className="text-[#15c4ae] w-5 h-5" />
+                      <span className="text-base font-bold text-[#06174c]">{column.title}</span>
+                    </div>
+
+                    {/* زیرخدمات */}
+                    {column.children.map((item, idx) => (
+                      <Link
+                        key={idx}
+                        href={item.href}
+                        className="flex items-center gap-2 text-sm text-gray-700 hover:text-[#15c4ae] transition"
+                      >
+                        <item.icon className="text-[#15c4ae] w-4 h-4 shrink-0" />
+                        <span>{item.title}</span>
+                      </Link>
+                    ))}
                   </div>
                 ))}
               </div>
@@ -147,9 +130,9 @@ const Header = () => {
 
         {/* دکمه لاگین */}
         <div className="hidden md:block">
-          <button className="bg-[#15c4ae] text-[#06174c] text-md px-6 py-3 rounded-full font-semibold" >
-            رزرو جلسه رایگان
-          </button>
+          <Link href="request" className="bg-[#15c4ae] text-[#06174c] text-md px-10 py-3 rounded-full font-semibold" >
+           مشاوره رایگان
+          </Link>
         </div>
 
         {isMobile && (

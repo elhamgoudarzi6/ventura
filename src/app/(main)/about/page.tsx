@@ -26,7 +26,7 @@ export default function AboutPage() {
             <div className="max-w-5xl mx-auto space-y-16">
                 <div className="text-center space-y-10">
                     <h1 className="text-4xl md:text-5xl font-bold text-gray-900">درباره ونچرا</h1>
-                    <p className="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">
+                    <p className="mt-4 text-lg text-gray-600 max-w-2xl text-justify mx-auto">
                         ونچرا جایی است که ایده‌های جسورانه با سرمایه‌ هوشمند تلاقی می‌کنند. ما به استارتاپ‌های نوپا با سرمایه‌گذاری راهبردی، منتورینگ عملی و ذهنیتی مبتنی بر رشد قدرت می‌بخشیم.
                     </p>
                 </div>
