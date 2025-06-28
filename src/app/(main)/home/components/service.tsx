@@ -59,10 +59,10 @@ export default function FeatureSection() {
         </motion.div>
 
         {/* گرید با دو ستون: لیست و عکس */}
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-5 items-center">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-10">
 
           {/* لیست ویژگی‌ها */}
-          <div className="md:col-span-6 space-y-4 h-full">
+          <div className="md:col-span-6 space-y-5 h-full flex flex-col justify-center order-2 md:order-1">
             {items.map((item, idx) => {
               const Icon = item.icon;
               return (
@@ -92,14 +92,14 @@ export default function FeatureSection() {
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="md:col-span-6 flex justify-center h-full"
+            className="md:col-span-6 flex justify-center h-full order-1 md:order-2"
           >
             <Image
               src="/assets/images/service1.jpg"
               alt="مشاوره کسب‌وکار"
               width={700}
               height={700}
-              className="rounded-2xl shadow-lg object-cover w-full max-w-lg"
+              className="rounded-2xl shadow-lg object-cover w-full"
             />
           </motion.div>
         </div>

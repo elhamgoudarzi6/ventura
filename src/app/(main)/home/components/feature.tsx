@@ -26,10 +26,10 @@ const features = [
 
 export default function FeaturesPage() {
   return (
-    <div className="min-h-screen bg-gray-50 px-6 py-20 md:px-16 text-gray-800">
+    <div className=" px-6 py-20 md:px-16 text-gray-800">
       <div className="max-w-5xl mx-auto space-y-12">
         <div className="text-center">
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">ویژگی‌های ما</h1>
+          <h1 className="text-3xl font-bold text-gray-900 mb-4">ویژگی‌های ما</h1>
           <p className="text-gray-600 text-lg">
             در ونچـــرا ما مجموعه‌ای از خدمات و امکانات ویژه را برای رشد سریع‌تر استارتاپ‌ها فراهم کرده‌ایم.
           </p>
@@ -37,13 +37,13 @@ export default function FeaturesPage() {
 
         <div className="grid sm:grid-cols-2 gap-8">
           {features.map((feature, idx) => (
-            <div key={idx} className="bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition">
+            <div key={idx} className="bg-white rounded-xl p-6 border border-gray-300 shadow-lg hover:shadow-xl transition">
               <div className="flex items-center gap-4 mb-3">
                 <div className="bg-[#15c4ae] text-[#06174c] p-3 rounded-full">
                   {feature.icon}
                 </div>
                 <div>
-                  <h3 className="text-xl font-semibold text-gray-800 mb-2">{feature.title}</h3>
+                  <h3 className="text-md md:text-xl font-bold text-gray-800 mb-2">{feature.title}</h3>
                   <p className="text-gray-600">{feature.description}</p>
                 </div>
               </div>

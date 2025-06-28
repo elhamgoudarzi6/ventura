@@ -2,14 +2,12 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { CheckSquare, DollarSign, Lightbulb, Menu, X } from "lucide-react";
+import { Check, DollarSign,FileText, Lightbulb, Menu, X } from "lucide-react";
 import { Drawer } from "@mui/material";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import { useTheme } from "@mui/material/styles";
 import Image from "next/image";
-import {
-  FileText,
-} from "lucide-react";
+
 
 const submenuData = [
   {
@@ -21,19 +19,19 @@ const submenuData = [
   {
     title: "راه‌اندازی استارتاپ",
     description: "از شکل‌گیری ایده تا اجرای موفق با نقشه راه دقیق و راهنمایی گام‌به‌گام",
-    icon: CheckSquare,
+    icon: Check,
     href: "#",
   },
   {
     title: "توسعه مدل کسب‌وکار",
     description: "کمک به طراحی و تست مدل درآمدی پایدار با تمرکز بر ارزش پیشنهادی",
-    icon: CheckSquare,
+    icon: Check,
     href: "#",
   },
   {
     title: "شراکت و هم‌بنیان‌گذاری",
     description: "ساختار شفاف و توافق‌نامه‌های اصولی برای مؤسسان جهت حفظ تعادل و رشد",
-    icon: CheckSquare,
+    icon: Check,
     href: "#",
   },
   {
@@ -45,19 +43,19 @@ const submenuData = [
   {
     title: "انتخاب روش تأمین مالی",
     description: "بدهی یا سهام؟ بهترین گزینه برای شما کدام است؟",
-    icon: CheckSquare,
+    icon: Check,
     href: "#",
   },
   {
     title: "آماده‌سازی برای ارائه به سرمایه‌گذار",
     description: "ساختاردهی ارائه و پاسخ به سوالات کلیدی",
-    icon: CheckSquare,
+    icon: Check,
     href: "#",
   },
   {
     title: "مدل‌سازی مالی",
     description: "پیش‌بینی دقیق درآمد، هزینه و سود",
-    icon: CheckSquare,
+    icon: Check,
     href: "#",
   },
   {
@@ -69,19 +67,19 @@ const submenuData = [
   {
     title: "Pitch Deck",
     description: "طراحی حرفه‌ای فایل ارائه برای جلسات سرمایه‌گذاری",
-    icon: CheckSquare,
+    icon: Check,
     href: "#",
   },
   {
     title: "Financial Projection",
     description: "پیش‌بینی مالی با جزئیات چندساله",
-    icon: CheckSquare,
+    icon: Check,
     href: "#",
   },
   {
     title: "Cap Table",
     description: "جدول سهام‌داری شفاف و دقیق",
-    icon: CheckSquare,
+    icon: Check,
     href: "#",
   },
 ];
@@ -115,7 +113,7 @@ const Header = () => {
               خدمات
             </button>
 
-            <div className="absolute left-1/2 -translate-x-1/2 top-full mt-4 w-[800px] rounded-xl shadow-xl bg-white text-gray-900 opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-all duration-300 z-50">
+            <div className="absolute left-1/2 -translate-x-1/2 top-full mt-4 w-[850px] rounded-xl shadow-xl bg-white text-gray-900 opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-all duration-300 z-50">
               <div className="grid grid-cols-3 gap-7 p-10">
                 {Array.from({ length: Math.ceil(submenuData.length / 4) }).map((_, colIndex) => (
                   <div key={colIndex} className="space-y-4">
@@ -123,9 +121,9 @@ const Header = () => {
                       .slice(colIndex * 4, colIndex * 4 + 4)
                       .map((item, i) => (
                         <Link key={i} href={item.href} className="flex gap-3 items-start hover:text-[#15c4ae]">
-                          <item.icon className="w-10 h-10 mt-1 text-[#15c4ae]" />
+                          <item.icon className="w-6 h-6 max-w-6 max-h-6 mt-1 text-[#15c4ae] shrink-0" />
                           <div>
-                            <div className="font-semibold text-[#15c4ae]">{item.title}</div>
+                            <div className="font-bold text-[#15c4ae] mb-1">{item.title}</div>
                             <p className="text-sm text-gray-600">{item.description}</p>
                           </div>
                         </Link>

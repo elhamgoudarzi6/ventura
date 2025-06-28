@@ -1,6 +1,5 @@
 "use client";
 import { motion } from "framer-motion";
-import { FaCheckCircle } from "react-icons/fa";
 import Image from 'next/image';
 import { ArrowLeft } from "lucide-react";
 import Link from 'next/link';
@@ -30,7 +29,7 @@ const caseStudies = [
 
 export default function CaseStudies() {
   return (
-    <section className="max-w-6xl mx-auto px-4 py-20">
+    <section className="max-w-6xl mx-auto px-6 py-20">
       <motion.h2
         className="text-4xl font-bold text-center mb-12 text-[#15171e]"
         initial={{ opacity: 0, y: -30 }}
@@ -65,7 +64,6 @@ export default function CaseStudies() {
                 <ArrowLeft className="w-5 h-5 mr-2" />
               </Link>
             </div>
-            <FaCheckCircle className="absolute top-5 right-5 text-[#14c5ae] text-xl" />
           </motion.div>
         ))}
       </div>

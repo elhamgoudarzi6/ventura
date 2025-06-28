@@ -24,7 +24,7 @@ const GoToTop = () => {
 
     return (
         <button onClick={scrollToTop} aria-label="Go to Top"
-            className={`fixed bottom-6 right-6 z-50 cursor-pointer bg-gray-800 text-white p-3 rounded-full shadow-lg transition-all duration-300 ${visible ? "opacity-100" : "opacity-0 pointer-events-none"}`}>
+            className={`fixed bottom-6 right-6 z-50 cursor-pointer bg-[#15c4ae] text-white p-3 rounded-full shadow-lg transition-all duration-300 ${visible ? "opacity-100" : "opacity-0 pointer-events-none"}`}>
             <IoChevronUpSharp className="w-5 h-5" />
         </button>
     );

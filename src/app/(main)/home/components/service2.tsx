@@ -40,7 +40,7 @@ const items = [
 export default function Service2() {
   return (
     <section className="py-10 px-6 bg-white">
-      <div className="max-w-7xl mx-auto space-y-10">
+      <div className="max-w-6xl mx-auto space-y-10">
 
         {/* عنوان وسط کل عرض */}
         <motion.div
@@ -57,7 +57,7 @@ export default function Service2() {
         </motion.div>
 
         {/* گرید با دو ستون: لیست و عکس */}
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-5 items-center">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-10">
 
           {/* تصویر */}
           <motion.div
@@ -72,12 +72,12 @@ export default function Service2() {
               alt="مشاوره کسب‌وکار"
               width={700}
               height={700}
-              className="rounded-2xl shadow-lg object-cover w-full max-w-lg"
+              className="rounded-2xl shadow-lg object-cover w-full"
             />
           </motion.div>
 
           {/* لیست ویژگی‌ها */}
-          <div className="md:col-span-6 space-y-5 h-full">
+          <div className="md:col-span-6 space-y-5 h-full flex flex-col justify-center">
             {items.map((item, idx) => {
               const Icon = item.icon;
               return (

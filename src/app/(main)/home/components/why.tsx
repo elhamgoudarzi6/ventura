@@ -71,6 +71,22 @@ export default function WhyUs() {
     <section className="bg-white py-20 px-6">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-10 items-center">
 
+        {/* تصویر */}
+        <motion.div
+          initial={{ opacity: 0, scale: 0.95 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.6 }}
+          className="md:col-span-6 flex justify-center"
+        >
+          <Image
+            src="/assets/images/why.jpg"
+            alt="چرا ونچرا"
+            width={600}
+            height={600}
+            className="rounded-2xl shadow-xl object-cover w-full"
+          />
+        </motion.div>
+
         {/* متن و ویژگی‌ها */}
         <div className="md:col-span-6 space-y-8">
           <motion.h2
@@ -110,21 +126,7 @@ export default function WhyUs() {
           </div>
         </div>
 
-        {/* تصویر */}
-        <motion.div
-          initial={{ opacity: 0, scale: 0.95 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.6 }}
-          className="md:col-span-6 flex justify-center"
-        >
-          <Image
-            src="/assets/images/why.jpg"
-            alt="چرا ونچرا"
-            width={600}
-            height={600}
-            className="rounded-2xl shadow-xl object-cover w-full"
-          />
-        </motion.div>
+
 
       </div>
     </section>

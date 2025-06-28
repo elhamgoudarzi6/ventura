@@ -75,7 +75,7 @@ export default function ProcessTimeline() {
                 <div className="md:hidden absolute right-9 top-0 w-1 h-full bg-[#06174c] rounded-full z-0">
                     <ChevronDown
                         size={40}
-                        className="absolute -bottom-1 left-1/2 -translate-x-1/2 text-[#06174c]"
+                        className="absolute bottom-[-20px] left-1/2 -translate-x-1/2 text-[#06174c]"
                     />
                 </div>
 
