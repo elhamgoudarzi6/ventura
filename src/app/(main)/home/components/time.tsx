@@ -9,41 +9,42 @@ import { ChevronLeft, ChevronDown } from 'lucide-react';
 const steps = [
     {
         icon: <Lightbulb className="w-8 h-8" />,
-        title: 'درخواست مشاوره',
-        desc: 'ثبت درخواست اولیه توسط استارتاپ',
-    },
-    {
-        icon: <Target className="w-8 h-8" />,
-        title: 'تحلیل بیزینس',
-        desc: 'بررسی مدل کسب‌وکار و اهداف',
+        title: 'آشنایی و درک وضعیت فعلی',
+        desc: 'درک عمیق از مدل کسب‌وکار شما، چالش‌ها، ریسک‌ها و انتظارات بنیان‌گذاران در مسیر جذب سرمایه.',
     },
     {
         icon: <FileText className="w-8 h-8" />,
-        title: 'تدوین استراتژی',
-        desc: 'تدوین پلن جذب سرمایه و اسناد مالی',
+        title: 'آماده‌سازی زیرساخت و مستندات',
+        desc: 'هدف: آماده‌سازی زیرساخت‌ها و تدوین مستندات کلیدی برای شروع فرآیند جذب سرمایه.',
     },
     {
-        icon: <TrendingUp className="w-8 h-8" />,
-        title: 'معرفی به سرمایه‌گذار',
-        desc: 'ارتباط با شبکه سرمایه‌گذاران تخصصی',
+        icon: <Target className="w-8 h-8" />,
+        title: 'شناسایی و هدف‌گذاری سرمایه‌گذاران',
+        desc: 'هدف: تدوین لیست اولویت‌دار سرمایه‌گذاران، تطبیق با نوع کسب‌وکار و تنظیم جلسات آشنایی.',
     },
     {
         icon: <Handshake className="w-8 h-8" />,
-        title: 'جلسات و مذاکرات',
-        desc: 'برگزاری جلسات و ارائه',
+        title: 'جلسات ارائه و مذاکره',
+        desc: 'هدف: ارائه حرفه‌ای و مذاکرات اثربخش برای دریافت تعهد و فرصت‌های سرمایه‌گذاری.',
     },
     {
         icon: <BadgeCheck className="w-8 h-8" />,
-        title: 'قرارداد نهایی',
-        desc: 'انعقاد قرارداد سرمایه‌گذاری',
+        title: 'بستن قرارداد و انتقال سرمایه',
+        desc: 'هدف: نهایی‌سازی توافقات، امضای قراردادهای حقوقی و دریافت سرمایه.',
+    },
+    {
+        icon: <TrendingUp className="w-8 h-8" />,
+        title: 'پشتیبانی پس از جذب سرمایه',
+        desc: 'هدف: نظارت بر اجرای تعهدات و آماده‌سازی استارتاپ برای مراحل بعدی رشد و جذب سرمایه.',
     },
 ];
+
 
 export default function ProcessTimeline() {
     return (
         <section className="py-16 px-4 bg-white">
-            <h2 className="text-3xl font-bold text-center text-gray-800 mb-12">
-                روند مشاوره و جذب سرمایه
+            <h2 className="text-3xl font-bold text-center text-gray-800 mb-16">
+                مسیری که با ما تجربه خواهید کرد
             </h2>
 
             <div className="relative max-w-6xl mx-auto">
@@ -63,14 +64,6 @@ export default function ProcessTimeline() {
                     />
                 </motion.div>
 
-                {/* <div className="hidden md:flex absolute top-8 right-0 w-full h-0.5 border-t-2 border-dashed border-[#06174c] z-0">
-                    <ChevronLeft
-                        size={30}
-                        className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-1/2 text-[#06174c]"
-                    />
-                </div> */}
-
-
                 {/* موبایل: خط عمودی با فلش پایین */}
                 <div className="md:hidden absolute right-9 top-0 w-1 h-full bg-[#06174c] rounded-full z-0">
                     <ChevronDown
@@ -79,7 +72,7 @@ export default function ProcessTimeline() {
                     />
                 </div>
 
-                <div className="flex flex-col md:flex-row justify-between relative z-10 gap-y-16 md:gap-y-0">
+                <div className="flex flex-col md:flex-row justify-between relative z-10 gap-y-20 md:gap-y-0">
                     {steps.map((step, idx) => (
                         <motion.div
                             key={idx}
@@ -93,7 +86,7 @@ export default function ProcessTimeline() {
                             <motion.div className="hidden md:flex w-16 h-16 p-4 rounded-full bg-[#15c4ae] text-[#06174c] items-center justify-center shadow-lg">
                                 {step.icon}
                             </motion.div>
-                            <div className="hidden md:block mt-6 text-center">
+                            <div className="hidden md:block mt-7 text-center">
                                 <h3 className="text-md font-extrabold  text-[#15c4ae]">{step.title}</h3>
                                 <p className="text-sm text-gray-500 mt-3">{step.desc}</p>
                             </div>

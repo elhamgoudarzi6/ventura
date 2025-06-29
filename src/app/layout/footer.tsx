@@ -1,13 +1,36 @@
 import Image from "next/image";
-import { FaInstagram, FaTwitter, FaLinkedin, FaFacebook } from "react-icons/fa";
+import {
+  TbBrandInstagram,
+  TbBrandTelegram,
+  TbBrandWhatsapp,
+  TbBrandLinkedin,
+  TbPhoneCall,
+} from "react-icons/tb";
 
 const Footer = () => {
   const icons = [
-    { icon: <FaInstagram /> },
-    { icon: <FaTwitter /> },
-    { icon: <FaLinkedin /> },
-    { icon: <FaFacebook /> },
+    {
+      icon: <TbBrandInstagram className="w-6 h-6" />,
+      href: "https://www.instagram.com/ventureway.ir",
+    },
+    {
+      icon: <TbBrandTelegram className="w-6 h-6" />,
+      href: "https://t.me/ventureway",
+    },
+    {
+      icon: <TbBrandWhatsapp className="w-6 h-6" />,
+      href: "https://wa.me/989106521341",
+    },
+    {
+      icon: <TbBrandLinkedin className="w-6 h-6" />,
+      href: "https://www.linkedin.com/company/venture-way",
+    },
+    {
+      icon: <TbPhoneCall className="w-6 h-6" />,
+      href: "tel:09106521341",
+    },
   ];
+
 
   return (
     <footer className="bg-[#06174c] text-gray-300 pt-14 pb-7 px-6 md:px-20">
@@ -19,7 +42,7 @@ const Footer = () => {
               src="/assets/images/logo.png"
               width={100}
               height={100}
-              alt="Developers working"
+              alt="Venture Way Logo"
               className="h-8 w-8 object-cover"
             />
             <h2 className="text-xl font-semibold text-[#15c4ae]" style={{ fontFamily: "logo" }}>
@@ -27,13 +50,19 @@ const Footer = () => {
             </h2>
           </div>
           <p className="text-sm text-gray-200 text-justify leading-relaxed">
-            ونچرا یک تیم مشاوره تخصصی در حوزه سرمایه‌پذیری استارتاپ‌هاست.ما با ترکیبی از تجربه، دانش و شبکه گسترده، به استارتاپ‌ها کمک می‌کنیم تا برای ورود به مذاکره با سرمایه‌گذار، کاملاً آماده باشند و برای جلب اعتماد سرمایه‌گذاران، مستندات حرفه‌ای و دقیقی را برای آن‌ها آماده کنیم.
+            ونچرا ارائه‌دهنده خدمات تخصصی مشاوره در حوزه جذب سرمایه استارتاپ‌هاست. ما با ترکیبی از تجربه، دانش و شبکه گسترده، به استارتاپ‌ها کمک می‌کنیم تا برای جذب سرمایه و مذاکره با سرمایه‌گذاران آماده و مستندات حرفه‌ای، دقیق و کاملی را ارائه دهند.
           </p>
 
           {/* Social Icons */}
-          <div className="flex space-x-4">
+          <div className="flex space-x-3">
             {icons.map((item, idx) => (
-              <a href="#" key={idx} className="text-[#15c4ae] text-xl hover:scale-110 transition">
+              <a
+                href={item.href}
+                key={idx}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[#15c4ae] text-xl hover:scale-110 transition"
+              >
                 {item.icon}
               </a>
             ))}
@@ -55,7 +84,7 @@ const Footer = () => {
           <h3 className="font-semibold mb-3">خدمات</h3>
           <ul className="space-y-2 text-sm text-gray-200">
             <li>مشاوره کسب‌وکار</li>
-            <li>جذب سرمایه‌</li>
+            <li>جذب سرمایه</li>
             <li>مستندسازی</li>
           </ul>
         </div>
@@ -63,22 +92,22 @@ const Footer = () => {
         {/* Contact */}
         <div className="md:col-span-2">
           <h3 className="font-semibold mb-3">راه‌های ارتباطی</h3>
-        <ul className="space-y-2 text-xs text-gray-200">
-          <li>09106042861</li>
-          <li>info@ventureway.ir</li>
-          <li>ایران، خرم‌آباد، کارخانه نوآوری لرستان</li>
-        </ul>
+          <ul className="space-y-2 text-sm text-gray-200">
+            <li>09106521341</li>
+            <li>venturewayofficial@gmail.com</li>
+            <li>ایران، خرم‌آباد، کارخانه نوآوری لرستان</li>
+          </ul>
+        </div>
       </div>
-      </div> 
+
       {/* Bottom Section */}
-  <div className="mt-10  border-t border-gray-800 pt-6 flex justify-center items-center text-xs text-gray-400">
-     <p>
-      © کلیه حقوق برای <span className="text-white font-medium">ونچرا</span> محفوظ است.{" "} 
-      {/* {new Date().getFullYear()} */}
-    </p> 
+      <div className="mt-10 border-t border-gray-800 pt-6 flex justify-center items-center text-xs text-gray-400">
+        <p>
+          © کلیه حقوق برای <span className="text-white font-medium">ونچرا</span> محفوظ است.
+        </p>
       </div>
     </footer>
-  ); 
+  );
 };
 
 export default Footer;

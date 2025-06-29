@@ -12,7 +12,7 @@ import Time from "./components/time";
 import CaseStudies from "./components/case";
 // import State from "./components/state";
 // import WorkProcess from "./components/t";
-import FeaturesPage from "./components/feature";
+import Features from "./components/feature";
 import Slogan from "./components/slogan";
 import Service2 from "./components/service2";
 import Why from "./components/why";
@@ -28,7 +28,7 @@ const HomePage = () => {
       <Service />
       <Service2 />
       <Service3 />
-      <FeaturesPage />
+      <Features/>
       <Time />
       {/* <Card /> */}
       <Why />

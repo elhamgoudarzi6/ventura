@@ -1,57 +1,72 @@
+'use client';
 
-import { Sparkles, ShieldCheck, Rocket, Users } from 'lucide-react';
+import { motion } from 'framer-motion';
+import { FileText, Video, Globe2, Headphones } from 'lucide-react';
 
 const features = [
   {
-    title: 'سرمایه‌گذاری هوشمند',
-    description: 'ما با تحلیل دقیق و مشاوره تخصصی، استارتاپ‌ها را برای جذب سرمایه هدفمند آماده می‌کنیم.',
-    icon: <ShieldCheck className="w-8 h-8" />,
+    title: 'تهیه مستندات استاندارد و حرفه‌ای و بروز',
+    description: '',
+    icon: <FileText className="w-7 h-7 text-[#06174c]" />,
   },
   {
-    title: 'شبکه منتورینگ قوی',
-    description: 'دسترسی به منتورها و سرمایه‌گذاران مطرح اکوسیستم کارآفرینی.',
-    icon: <Users className="w-8 h-8" />,
+    title: 'مشاوره آنلاین و حضوری',
+    description: '',
+    icon: <Video className="w-7 h-7 text-[#06174c]" />,
   },
   {
-    title: 'شتاب‌دهی تخصصی',
-    description: 'ما در مسیر رشد، از MVP تا جذب سرمایه، همراهتان هستیم.',
-    icon: <Rocket className="w-8 h-8" />,
+    title: 'دسترسی آنلاین لحظه‌ای به تغییرات مستندات',
+    description: '',
+    icon: <Globe2 className="w-7 h-7 text-[#06174c]" />,
   },
   {
-    title: 'پلتفرم یکپارچه',
-    description: 'تمام ابزارها و خدمات موردنیاز برای رشد استارتاپ شما در یک بستر.',
-    icon: <Sparkles className="w-8 h-8" />,
+    title: 'پشتیبانی ۲۴ ساعته',
+    description: '',
+    icon: <Headphones className="w-7 h-7 text-[#06174c]" />,
   },
 ];
 
-export default function FeaturesPage() {
+export default function Features() {
   return (
-    <div className=" px-6 py-20 md:px-16 text-gray-800">
-      <div className="max-w-5xl mx-auto space-y-12">
-        <div className="text-center">
-          <h1 className="text-3xl font-bold text-gray-900 mb-4">ویژگی‌های ما</h1>
-          <p className="text-gray-600 text-lg">
-            در ونچـــرا ما مجموعه‌ای از خدمات و امکانات ویژه را برای رشد سریع‌تر استارتاپ‌ها فراهم کرده‌ایم.
+    <section className="bg-[#06174c] my-10 py-20 px-6 md:px-16">
+      <div className="max-w-6xl mx-auto space-y-10">
+        {/* عنوان */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, ease: 'easeOut' }}
+          viewport={{ once: true }}
+          className="text-center"
+        >
+          <h2 className="text-3xl md:text-4xl font-extrabold text-white mb-5">ویژگی‌های ما</h2>
+          <p className="text-gray-300 text-lg max-w-3xl mx-auto">
+            در ونچـــرا، مجموعه‌ای از خدمات و امکانات یکپارچه برای رشد سریع‌تر استارتاپ‌ها فراهم کرده‌ایم.
           </p>
-        </div>
+        </motion.div>
 
-        <div className="grid sm:grid-cols-2 gap-5">
+        {/* کارت‌ها */}
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-5">
           {features.map((feature, idx) => (
-            <div key={idx} className="bg-white rounded-xl p-5 border border-gray-300 shadow-lg hover:shadow-xl transition">
-              <div className="flex items-center gap-4 mb-3">
-                <div className="bg-[#15c4ae] text-[#06174c] p-3 rounded-full">
+            <motion.div
+              key={idx}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              whileHover={{ scale: 1.03 }}
+              transition={{ duration: 0.6, delay: idx * 0.15 }}
+              className="bg-white/5 border border-white/10 rounded-2xl p-5 shadow-xl"
+            >
+              <div className="flex flex-col items-center gap-4">
+                <div className="bg-[#15c4ae] p-3 rounded-full">
                   {feature.icon}
                 </div>
-                <div>
-                  <h3 className="text-md md:text-xl font-bold text-gray-800 mb-2">{feature.title}</h3>
-                  <p className="text-gray-600">{feature.description}</p>
+                <div className="text-center">
+                  <h3 className="text-white font-bold text-sm sm:text-base md:text-lg">{feature.title}</h3>
                 </div>
               </div>
-
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 }

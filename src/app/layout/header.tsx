@@ -28,7 +28,7 @@ import {
 
 const megaMenu = [
   {
-    title: 'مشاوره کسب‌وکار',
+    title: 'مشاوره کسب‌وکار', href: "",
     icon: Lightbulb,
     children: [
       { title: 'راه‌اندازی استارتاپ', icon: Layers3, href: '#' },
@@ -39,7 +39,7 @@ const megaMenu = [
     ],
   },
   {
-    title: 'مشاوره جذب سرمایه',
+    title: 'مشاوره جذب سرمایه', href: "",
     icon: DollarSign,
     children: [
       { title: 'انتخاب روش تأمین مالی', icon: DollarSign, href: '#' },
@@ -50,14 +50,14 @@ const megaMenu = [
     ],
   },
   {
-    title: 'آماده‌سازی مستندات',
+    title: 'آماده‌سازی مستندات', href: "",
     icon: FileText,
     children: [
-      { title: 'فایل ارائه به سرمایه گذار (Pitch Deck)', icon: Presentation, href: '#' },
-      { title: 'پیش بینی های مالی (Financial Projection)', icon: BarChart2, href: '#' },
-      { title: 'جدول سهامداری (Cap Table)', icon: Table, href: '#' },
-      { title: 'طرح کسب و کار (Business Plan)', icon: Clipboard, href: '#' },
-      { title: 'طرح توجیهی کسب و کار (Feasibility Study)', icon: BookText, href: '#' },
+      { title: 'فایل ارائه به سرمایه گذار', icon: Presentation, href: '#' },
+      { title: 'پیش بینی های مالی', icon: BarChart2, href: '#' },
+      { title: 'جدول سهامداری', icon: Table, href: '#' },
+      { title: 'طرح کسب و کار', icon: Clipboard, href: '#' },
+      { title: 'طرح توجیهی کسب و کار', icon: BookText, href: '#' },
     ],
   },
 ];
@@ -86,27 +86,23 @@ const Header = () => {
 
           {/* Mega Menu */}
           <div className="relative group">
-            <button className="cursor-pointer px-4 py-1 hover:underline underline-offset-8 decoration-[#15c4ae] decoration-2 transition">
+            <Link href="" className="cursor-pointer px-4 py-1 hover:underline underline-offset-15 decoration-[#15c4ae] decoration-1 transition">
               خدمات
-            </button>
+            </Link>
 
-            <div className="absolute left-1/2 -translate-x-1/2 top-full mt-4 w-[860px] rounded-xl shadow-xl bg-white text-gray-900 opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-all duration-300 z-50">
+            <div className="absolute left-1/2 -translate-x-1/2 top-full mt-4 w-[800px] rounded-xl shadow-xl bg-white text-gray-900 opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-all duration-300 z-50">
               <div className="grid grid-cols-3 gap-6 p-8">
                 {megaMenu.map((column, index) => (
                   <div key={index} className="space-y-4">
                     {/* عنوان اصلی ستون */}
-                    <div className="flex items-center gap-2 border-b border-gray-200 pb-2 mb-2">
+                    <Link href={column.href} className="flex items-center gap-2 border-b border-gray-200 pb-2 mb-2">
                       <column.icon className="text-[#15c4ae] w-5 h-5" />
                       <span className="text-base font-bold text-[#06174c]">{column.title}</span>
-                    </div>
+                    </Link>
 
                     {/* زیرخدمات */}
                     {column.children.map((item, idx) => (
-                      <Link
-                        key={idx}
-                        href={item.href}
-                        className="flex items-center gap-2 text-sm text-gray-700 hover:text-[#15c4ae] transition"
-                      >
+                      <Link key={idx} href={item.href} className="flex items-center gap-2 text-sm text-gray-700 hover:text-[#15c4ae] transition">
                         <item.icon className="text-[#15c4ae] w-4 h-4 shrink-0" />
                         <span>{item.title}</span>
                       </Link>
@@ -131,7 +127,7 @@ const Header = () => {
         {/* دکمه لاگین */}
         <div className="hidden md:block">
           <Link href="request" className="bg-[#15c4ae] text-[#06174c] text-md px-10 py-3 rounded-full font-semibold" >
-           مشاوره رایگان
+            مشاوره رایگان
           </Link>
         </div>
 
