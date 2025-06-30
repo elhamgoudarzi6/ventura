@@ -5,7 +5,7 @@ import { FileText, Video, Globe2, Headphones } from 'lucide-react';
 
 const features = [
   {
-    title: 'تهیه مستندات استاندارد و حرفه‌ای و بروز',
+    title: 'تهیه مستندات استاندارد، حرفه‌ای، بروز',
     description: '',
     icon: <FileText className="w-7 h-7 text-[#06174c]" />,
   },
@@ -53,6 +53,7 @@ export default function Features() {
               whileInView={{ opacity: 1, y: 0 }}
               whileHover={{ scale: 1.03 }}
               transition={{ duration: 0.6, delay: idx * 0.15 }}
+              viewport={{ once: true }}
               className="bg-white/5 border border-white/10 rounded-2xl p-5 shadow-xl"
             >
               <div className="flex flex-col items-center gap-4">
@@ -60,7 +61,7 @@ export default function Features() {
                   {feature.icon}
                 </div>
                 <div className="text-center">
-                  <h3 className="text-white font-bold text-sm sm:text-base md:text-lg">{feature.title}</h3>
+                  <h3 className="text-white font-bold text-sm sm:text-base md:text-md">{feature.title}</h3>
                 </div>
               </div>
             </motion.div>

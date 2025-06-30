@@ -61,6 +61,7 @@ const megaMenu = [
     ],
   },
 ];
+
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -116,7 +117,7 @@ const Header = () => {
           <Link href="/about" prefetch className="px-4 py-1 hover:underline underline-offset-15 decoration-[#15c4ae] decoration-1 transition">
             درباره ما
           </Link>
-          <Link href="/about" prefetch className="px-4 py-1 hover:underline underline-offset-15 decoration-[#15c4ae] decoration-1 transition">
+          <Link href="/blog" prefetch className="px-4 py-1 hover:underline underline-offset-15 decoration-[#15c4ae] decoration-1 transition">
             بلاگ
           </Link>
           <Link href="/contact" prefetch className="px-4 py-1 hover:underline underline-offset-15 decoration-[#15c4ae] decoration-1 transition">
@@ -126,7 +127,7 @@ const Header = () => {
 
         {/* دکمه لاگین */}
         <div className="hidden md:block">
-          <Link href="request" className="bg-[#15c4ae] text-[#06174c] text-md px-10 py-3 rounded-full font-semibold" >
+          <Link href="request" className="bg-[#15c4ae] text-[#06174c] text-md px-10 py-3 rounded-full font-bold" >
             مشاوره رایگان
           </Link>
         </div>

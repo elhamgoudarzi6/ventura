@@ -34,7 +34,8 @@ export default function CaseStudies() {
         className="text-4xl font-bold text-center mb-12 text-[#15171e]"
         initial={{ opacity: 0, y: -30 }}
         whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6 }}>
+        transition={{ duration: 0.6 }}
+        viewport={{ once: true }}>
         خدمات ما
       </motion.h2>
 
@@ -47,6 +48,7 @@ export default function CaseStudies() {
             whileInView={{ opacity: 1, y: 0 }}
             whileHover={{ scale: 1.03 }}
             transition={{ duration: 0.6, delay: idx * 0.2 }}
+            viewport={{ once: true }}
           >
             <Image
               src={item.image}

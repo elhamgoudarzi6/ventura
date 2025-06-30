@@ -51,6 +51,7 @@ export default function WhyUs() {
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
             className="text-3xl md:text-4xl font-extrabold text-[#06174c] text-right"
           >
             چرا <span className="text-[#15c4ae]">ونچرا؟</span>
@@ -70,24 +71,29 @@ export default function WhyUs() {
                   initial={{ opacity: 0, x: -20 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.4, delay: idx * 0.15 }}
+                  viewport={{ once: true }}
                   className="flex items-center gap-3"
                 >
                   <div className="bg-[#15c4ae]/10 text-[#15c4ae] p-3 rounded-full">
                     <Icon className="w-5 h-5" />
                   </div>
-                  <h3 className="text-base font-semibold text-[#06174c]">{item.title}</h3>
+                  <h3 className="text-base font-semibold text-gray-600">{item.title}</h3>
                 </motion.div>
               );
             })}
           </div>
-     <div className="text-center md:text-left mt-5">
-  <Link
-    href="/request"
-    className="bg-[#15c4ae] hover:bg-[#12b3a0] transition-colors duration-300 text-[#06174c] text-md px-7 py-2 rounded-full"
-  >
-    مشاوره رایگان
-  </Link>
-</div>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.6 }}
+            viewport={{ once: true }}
+            className="text-center md:text-left mt-7"
+          >
+            <Link href="/request"
+              className="bg-[#15c4ae] hover:bg-[#12b3a0] transition-colors duration-300 text-[#06174c] text-md px-7 py-2 rounded-full" >
+              مشاوره رایگان
+            </Link>
+          </motion.div>
         </div>
       </div>
     </section>

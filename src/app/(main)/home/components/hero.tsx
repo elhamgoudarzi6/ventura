@@ -25,7 +25,7 @@ const Hero = () => {
               مشاوره رایگان
             </Link>
             <Link href="about" prefetch className="border border-[#15c4ae] text-[#15c4ae] px-6 py-3 rounded-full w-full md:w-1/3 hover:bg-[#15c4ae]/10 transition">
-            دریافت کاتالوگ
+              دریافت کاتالوگ
             </Link>
           </div>
         </motion.div>
@@ -37,15 +37,17 @@ const Hero = () => {
           transition={{ delay: 0.2, duration: 0.5 }}
         >
           <Image
-            src="/assets/images/bar.png"
+            src="/assets/images/hero.png"
             alt="Startup illustration"
             width={500}
             height={500}
             className="w-full max-w-md mx-auto"
           />
-          {/* <video className="w-full rounded-2xl" autoPlay muted loop playsInline>
+          {/* <video className="w-full rounded-2xl object-cover" autoPlay muted loop playsInline
+            style={{ background: "transparent" }}>
             <source src="/assets/images/3.mp4" type="video/mp4" />
           </video> */}
+
         </motion.div>
       </div>
     </section>
