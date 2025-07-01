@@ -1,83 +1,173 @@
-'use client';
+// 'use client';
 
-import { motion } from 'framer-motion';
+// import { motion } from 'framer-motion';
+// import {
+//   FaHandHoldingUsd,
+//   FaChartLine,
+//   FaFileContract,
+//   FaHandshake,
+//   FaLaptop,
+// } from 'react-icons/fa';
+// import Link from 'next/link';
+
+// const steps = [
+//   {
+//     title: 'انتخاب روش تأمین مالی',
+//     desc:
+//       'در این بخش، ما به استارتاپ‌ها کمک می‌کنیم تا بین روش‌های مختلف تأمین مالی (سرمایه‌گذاری جسورانه، سرمایه فرشته، وام، بوت‌استرپینگ و...) مناسب‌ترین گزینه را انتخاب کنند.',
+//     icon: FaHandHoldingUsd,
+//   },
+//   {
+//     title: 'مشاوره ارائه به سرمایه‌گذار',
+//     desc:
+//       'ساخت یک ارائه حرفه‌ای برای جلسات سرمایه‌گذاری، نیازمند درک عمیق از زبان سرمایه‌گذاران است. ما در ونچرا به شما کمک می‌کنیم Deck جذاب بسازید و بدرخشید.',
+//     icon: FaLaptop,
+//   },
+//   {
+//     title: 'مشاوره مدل‌سازی مالی',
+//     desc:
+//       'سرمایه‌گذاران برای تصمیم‌گیری، به مدل مالی دقیق و قابل دفاع نیاز دارند. تیم ونچرا به شما در طراحی سناریوهای مالی کمک می‌کند.',
+//     icon: FaChartLine,
+//   },
+//   {
+//     title: 'ساختارهای توافق و مذاکره با سرمایه‌گذاران',
+//     desc:
+//       'با تحلیل Term Sheet و درک خواسته‌های سرمایه‌گذار، به شما کمک می‌کنیم تا در مذاکرات حرفه‌ای و دقیق عمل کنید.',
+//     icon: FaHandshake,
+//   },
+//   {
+//     title: 'مشاوره قراردادهای سرمایه‌گذاری',
+//     desc:
+//       'ما در تدوین، تحلیل و اصلاح قراردادهای سرمایه‌گذاری، واگذاری سهام، حق تقدم و شرایط خروج همراهی‌تان می‌کنیم.',
+//     icon: FaFileContract,
+//   },
+// ];
+
+// export default function InvestmentConsultingPage() {
+//   return (
+//     <section className="py-24 px-4 max-w-6xl mx-auto my-10">
+      // <h2 className="text-3xl md:text-4xl font-bold text-center text-[#06174c] mb-8">
+      //   مشاوره جذب سرمایه
+      // </h2>
+      // <p className="text-center text-gray-600 max-w-2xl mx-auto mb-20">
+      //   در ونچرا، مشاوره جذب سرمایه را با نگاه تخصصی ارائه می‌دهیم؛ از انتخاب روش تأمین مالی تا مذاکره و عقد قرارداد با سرمایه‌گذاران. آماده جذب سرمایه حرفه‌ای شوید.
+      // </p>
+
+//       <div className="relative">
+//         <div className="hidden md:block absolute top-0 bottom-0 left-1/2 transform -translate-x-1/2 w-1 bg-[#15c4ae]/30 z-0" />
+
+//         <div className="flex flex-col gap-5 z-10 relative">
+//           {steps.map((step, i) => (
+//             <motion.div
+//               key={i}
+//               initial={{ opacity: 0, y: 40 }}
+//               whileInView={{ opacity: 1, y: 0 }}
+//               transition={{ duration: 0.6, delay: i * 0.1 }}
+//               viewport={{ once: true }}
+//               className={`relative z-10 flex flex-col md:flex-row items-center gap-5 ${i % 2 === 0 ? 'md:flex-row-reverse' : ''}`}>
+//               {/* محتوا */}
+//               <div className="md:w-1/2 space-y-3 text-justify p-7 bg-white shadow-md rounded-2xl border border-gray-200">
+//                 <div className="flex items-center gap-3">
+//                   <div className="p-3 rounded-full bg-[#15c4ae] text-[#06174c] shadow">
+//                     <step.icon className='w-10 h-10' />
+//                   </div>
+//                   <h3 className="text-lg font-bold text-[#15c4ae]">{step.title}</h3>
+//                 </div>
+//                 <p className="text-gray-600 leading-relaxed">{step.desc}</p>
+//               </div>
+//             </motion.div>
+//           ))}
+//         </div>
+//       </div>
+
+//       <div className="mt-24 text-center space-y-6">
+//         <p className="text-xl font-semibold text-[#15c4ae]">
+//           آماده‌ای سرمایه‌گذار را متقاعد کنی؟
+//         </p>
+//         <p className="text-gray-700">
+//           از انتخاب بهترین روش تأمین مالی تا عقد قرارداد حرفه‌ای، ما کنارت هستیم.
+//         </p>
+//         <Link href="/request" className="inline-block bg-[#15c4ae] hover:bg-[#109d92] transition text-white px-6 py-3 rounded-xl text-lg font-bold shadow-md" >
+//           رزرو مشاوره تخصصی جذب سرمایه
+//         </Link>
+//       </div>
+//     </section>
+//   );
+// }
+
+
+
+"use client";
+
+import Link from "next/link";
 import {
-  FaHandHoldingUsd,
-  FaChartLine,
-  FaFileContract,
-  FaHandshake,
-  FaLaptop,
-} from 'react-icons/fa';
-import Link from 'next/link';
+  HandCoins,
+  Presentation,
+  LineChart,
+  Handshake,
+  FileSignature,
+} from "lucide-react";
 
 const steps = [
   {
-    title: 'انتخاب روش تأمین مالی',
+    title: "انتخاب روش تأمین مالی",
     desc:
-      'در این بخش، ما به استارتاپ‌ها کمک می‌کنیم تا بین روش‌های مختلف تأمین مالی (سرمایه‌گذاری جسورانه، سرمایه فرشته، وام، بوت‌استرپینگ و...) مناسب‌ترین گزینه را انتخاب کنند.',
-    icon: FaHandHoldingUsd,
+      "در این بخش، ما به استارتاپ‌ها کمک می‌کنیم تا بین روش‌های مختلف تأمین مالی (سرمایه‌گذاری جسورانه، سرمایه فرشته، وام، بوت‌استرپینگ و...) مناسب‌ترین گزینه را انتخاب کنند.",
+    icon: HandCoins,
   },
   {
-    title: 'مشاوره ارائه به سرمایه‌گذار',
+    title: "مشاوره ارائه به سرمایه‌گذار",
     desc:
-      'ساخت یک ارائه حرفه‌ای برای جلسات سرمایه‌گذاری، نیازمند درک عمیق از زبان سرمایه‌گذاران است. ما در ونچرا به شما کمک می‌کنیم Deck جذاب بسازید و بدرخشید.',
-    icon: FaLaptop,
+      "ساخت یک ارائه حرفه‌ای برای جلسات سرمایه‌گذاری، نیازمند درک عمیق از زبان سرمایه‌گذاران است. ما در ونچرا به شما کمک می‌کنیم Deck جذاب بسازید و بدرخشید.",
+    icon: Presentation,
   },
   {
-    title: 'مشاوره مدل‌سازی مالی',
+    title: "مشاوره مدل‌سازی مالی",
     desc:
-      'سرمایه‌گذاران برای تصمیم‌گیری، به مدل مالی دقیق و قابل دفاع نیاز دارند. تیم ونچرا به شما در طراحی سناریوهای مالی کمک می‌کند.',
-    icon: FaChartLine,
+      "سرمایه‌گذاران برای تصمیم‌گیری، به مدل مالی دقیق و قابل دفاع نیاز دارند. تیم ونچرا به شما در طراحی سناریوهای مالی کمک می‌کند.",
+    icon: LineChart,
   },
   {
-    title: 'ساختارهای توافق و مذاکره با سرمایه‌گذاران',
+    title: "ساختارهای توافق و مذاکره با سرمایه‌گذاران",
     desc:
-      'با تحلیل Term Sheet و درک خواسته‌های سرمایه‌گذار، به شما کمک می‌کنیم تا در مذاکرات حرفه‌ای و دقیق عمل کنید.',
-    icon: FaHandshake,
+      "با تحلیل Term Sheet و درک خواسته‌های سرمایه‌گذار، به شما کمک می‌کنیم تا در مذاکرات حرفه‌ای و دقیق عمل کنید.",
+    icon: Handshake,
   },
   {
-    title: 'مشاوره قراردادهای سرمایه‌گذاری',
+    title: "مشاوره قراردادهای سرمایه‌گذاری",
     desc:
-      'ما در تدوین، تحلیل و اصلاح قراردادهای سرمایه‌گذاری، واگذاری سهام، حق تقدم و شرایط خروج همراهی‌تان می‌کنیم.',
-    icon: FaFileContract,
+      "ما در تدوین، تحلیل و اصلاح قراردادهای سرمایه‌گذاری، واگذاری سهام، حق تقدم و شرایط خروج همراهی‌تان می‌کنیم.",
+    icon: FileSignature,
   },
 ];
-
-export default function InvestmentConsultingPage() {
+export default function DocumentGrid() {
   return (
-    <section className="py-24 px-4 max-w-6xl mx-auto my-10">
+    <div className="w-full px-4 py-10 my-20">
       <h2 className="text-3xl md:text-4xl font-bold text-center text-[#06174c] mb-8">
         مشاوره جذب سرمایه
       </h2>
       <p className="text-center text-gray-600 max-w-2xl mx-auto mb-20">
         در ونچرا، مشاوره جذب سرمایه را با نگاه تخصصی ارائه می‌دهیم؛ از انتخاب روش تأمین مالی تا مذاکره و عقد قرارداد با سرمایه‌گذاران. آماده جذب سرمایه حرفه‌ای شوید.
       </p>
-
-      <div className="relative">
-        <div className="hidden md:block absolute top-0 bottom-0 left-1/2 transform -translate-x-1/2 w-1 bg-[#15c4ae]/30 z-0" />
-
-        <div className="flex flex-col gap-5 z-10 relative">
-          {steps.map((step, i) => (
-            <motion.div
-              key={i}
-              initial={{ opacity: 0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: i * 0.1 }}
-              viewport={{ once: true }}
-              className={`relative z-10 flex flex-col md:flex-row items-center gap-5 ${i % 2 === 0 ? 'md:flex-row-reverse' : ''}`}>
-              {/* محتوا */}
-              <div className="md:w-1/2 space-y-3 text-justify p-7 bg-white shadow-md rounded-2xl border border-gray-200">
-                <div className="flex items-center gap-3">
-                  <div className="p-3 rounded-full bg-[#15c4ae] text-[#06174c] shadow">
-                    <step.icon className='w-10 h-10' />
-                  </div>
-                  <h3 className="text-lg font-bold text-[#15c4ae]">{step.title}</h3>
-                </div>
-                <p className="text-gray-600 leading-relaxed">{step.desc}</p>
+      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-5 max-w-7xl mx-auto">
+        {steps.map((doc, i) => (
+          <div key={i} className="flex flex-col items-center">
+            {/* Circle Icon */}
+            <div className="relative flex flex-col items-center">
+              <div className="p-4 rounded-full shadow-xl bg-[#15c4ae] flex items-center justify-center text-[#06174c]">
+                <doc.icon className='h-10 w-10' />
               </div>
-            </motion.div>
-          ))}
-        </div>
+              {/* Dotted Line */}
+              <div className="w-px h-16 border-l border-dashed border-gray-400"></div>
+            </div>
+
+            {/* Card */}
+            <div className="bg-white shadow-lg rounded-xl border border-gray-200 p-4 text-center w-full h-full">
+              <h3 className="text-md md:text-base text-[#15c4ae] font-semibold">{doc.title}</h3>
+              <p className="text-sm text-gray-500 mt-2">{doc.desc}</p>
+            </div>
+          </div>
+        ))}
       </div>
 
       <div className="mt-24 text-center space-y-6">
@@ -91,10 +181,9 @@ export default function InvestmentConsultingPage() {
           رزرو مشاوره تخصصی جذب سرمایه
         </Link>
       </div>
-    </section>
+    </div>
   );
 }
-
 
 
 // 'use client';

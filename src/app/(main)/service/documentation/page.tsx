@@ -45,6 +45,12 @@ const documents = [
 export default function GridSection() {
   return (
     <section className="py-20 px-4 max-w-5xl mx-auto my-10">
+      <h2 className="text-3xl md:text-4xl font-bold text-center text-[#06174c] mb-8">
+        آماده سازی مستندات
+      </h2>
+      <p className="text-center text-gray-600 max-w-2xl mx-auto mb-20">
+        آماده‌سازی مستندات تخصصی برای جذب سرمایه، مستندات مالی، حقوقی و تجاری استارتاپ
+        برای جذب سرمایه‌گذار حرفه‌ای، مستندات دقیق و استاندارد ضروری‌اند. در ونچرا، انواع فایل‌های کلیدی مانند Pitch Deck، مدل مالی، طرح کسب‌وکار و جدول سهامداری را با دقت و استانداردهای بین‌المللی آماده می‌کنیم.      </p>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-15 md:gap-0">
         {documents.map((item, index) => (
           <div key={index} className="flex flex-col items-center justify-center text-center">
