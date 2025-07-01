@@ -15,39 +15,39 @@ const steps = [
     {
         icon: <FileText className="w-8 h-8" />,
         title: 'آماده‌سازی زیرساخت و مستندات',
-        desc: 'هدف: آماده‌سازی زیرساخت‌ها و تدوین مستندات کلیدی برای شروع فرآیند جذب سرمایه.',
+        desc: 'آماده‌سازی زیرساخت‌ها و تدوین مستندات کلیدی برای شروع فرآیند جذب سرمایه.',
     },
     {
         icon: <Target className="w-8 h-8" />,
         title: 'شناسایی و هدف‌گذاری سرمایه‌گذاران',
-        desc: 'هدف: تدوین لیست اولویت‌دار سرمایه‌گذاران، تطبیق با نوع کسب‌وکار و تنظیم جلسات آشنایی.',
+        desc: 'تدوین لیست اولویت‌دار سرمایه‌گذاران، تطبیق با نوع کسب‌وکار و تنظیم جلسات آشنایی.',
     },
     {
         icon: <Handshake className="w-8 h-8" />,
         title: 'جلسات ارائه و مذاکره',
-        desc: 'هدف: ارائه حرفه‌ای و مذاکرات اثربخش برای دریافت تعهد و فرصت‌های سرمایه‌گذاری.',
+        desc: 'ارائه حرفه‌ای و مذاکرات اثربخش برای دریافت تعهد و فرصت‌های سرمایه‌گذاری.',
     },
     {
         icon: <BadgeCheck className="w-8 h-8" />,
         title: 'بستن قرارداد و انتقال سرمایه',
-        desc: 'هدف: نهایی‌سازی توافقات، امضای قراردادهای حقوقی و دریافت سرمایه.',
+        desc: 'نهایی‌سازی توافقات، امضای قراردادهای حقوقی و دریافت سرمایه.',
     },
     {
         icon: <TrendingUp className="w-8 h-8" />,
         title: 'پشتیبانی پس از جذب سرمایه',
-        desc: 'هدف: نظارت بر اجرای تعهدات و آماده‌سازی استارتاپ برای مراحل بعدی رشد و جذب سرمایه.',
+        desc: 'نظارت بر اجرای تعهدات و آماده‌سازی استارتاپ برای مراحل بعدی رشد و جذب سرمایه.',
     },
 ];
 
 
 export default function ProcessTimeline() {
     return (
-        <section className="py-16 px-4 bg-white">
+        <section className="py-16 px-4 md:px-0 bg-white">
             <h2 className="text-3xl font-bold text-center text-gray-800 mb-16">
                 مسیری که با ما تجربه خواهید کرد
             </h2>
 
-            <div className="relative max-w-6xl mx-auto">
+            <div className="relative max-w-7xl mx-auto">
                 {/* خط تایم‌لاین */}
 
                 {/* دسکتاپ: خط افقی با فلش سمت چپ */}
@@ -72,7 +72,7 @@ export default function ProcessTimeline() {
                     />
                 </div>
 
-                <div className="flex flex-col md:flex-row justify-between relative z-10 gap-y-20 md:gap-y-0">
+                <div className="flex flex-col md:flex-row justify-between relative z-10 gap-x-2 gap-y-20 md:gap-y-0">
                     {steps.map((step, idx) => (
                         <motion.div
                             key={idx}
@@ -87,8 +87,8 @@ export default function ProcessTimeline() {
                                 {step.icon}
                             </motion.div>
                             <div className="hidden md:block mt-7 text-center">
-                                <h3 className="text-md font-extrabold  text-[#15c4ae]">{step.title}</h3>
-                                <p className="text-sm text-gray-500 mt-3">{step.desc}</p>
+                                <h3 className="text-[14px] font-extrabold  text-[#15c4ae]">{step.title}</h3>
+                                <p className="text-sm text-gray-500  mt-3 px-2">{step.desc}</p>
                             </div>
 
                             {/* حالت موبایل */}

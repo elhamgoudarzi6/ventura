@@ -9,20 +9,20 @@ const caseStudies = [
     title: "مشاوره کسب و کار",
     summary: " ما از پایه‌ترین مراحل تا توسعه ساختار حرفه‌ای همراه شما هستیم. مشاوره‌های ما، مسیر رشد کسب‌وکارتان را هدفمند می‌سازد.",
     image: "/assets/images/report.png",
-    link: "/about"
+    link: "service/consulting"
   },
   {
     title: "مشاوره جذب سرمایه",
     summary: "سرمایه‌گذاری فقط پول نیست، بلکه شراکت هوشمندانه است. ما کمک می‌کنیم دقیق، حرفه‌ای و هدفمند وارد این مسیر شوید.",
     image: "/assets/images/budget.png",
-    link: "/about"
+    link: "service/investment"
 
   },
   {
     title: "آماده سازی مستندات",
     summary: "داشتن مستندات حرفه‌ای و دقیق، اولین گام جلب اعتماد سرمایه‌گذاران است. ما ابزارهای لازم برای جذب موفق را به شما می‌دهیم.",
     image: "/assets/images/ch.png",
-    link: "/about"
+    link: "service/documentation"
 
   },
 ];

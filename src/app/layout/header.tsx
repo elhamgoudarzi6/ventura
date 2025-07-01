@@ -28,7 +28,7 @@ import {
 
 const megaMenu = [
   {
-    title: 'مشاوره کسب‌وکار', href: "",
+    title: 'مشاوره کسب‌وکار', href: "/service/consulting",
     icon: Lightbulb,
     children: [
       { title: 'راه‌اندازی استارتاپ', icon: Layers3, href: '#' },
@@ -39,7 +39,7 @@ const megaMenu = [
     ],
   },
   {
-    title: 'مشاوره جذب سرمایه', href: "",
+    title: 'مشاوره جذب سرمایه', href: "/service/investment",
     icon: DollarSign,
     children: [
       { title: 'انتخاب روش تأمین مالی', icon: DollarSign, href: '#' },
@@ -50,7 +50,7 @@ const megaMenu = [
     ],
   },
   {
-    title: 'آماده‌سازی مستندات', href: "",
+    title: 'آماده‌سازی مستندات', href: "/service/documentation",
     icon: FileText,
     children: [
       { title: 'فایل ارائه به سرمایه گذار', icon: Presentation, href: '#' },

@@ -43,7 +43,7 @@ body {
   color: var(--foreground);
   direction: rtl;
   font-family: primary;
-  
+
 }
 
 
@@ -85,6 +85,25 @@ body {
       /* چپ وسط */
     );
 }
+
+.arrow-card {
+  position: relative;
+  clip-path: polygon(0 0,
+      calc(100% - 25px) 0,
+      100% 50%,
+      calc(100% - 25px) 100%,
+      0 100%);
+}
+
+.clip-arrow {
+  clip-path: polygon(0 0,
+      100% 50%,
+      0 100%,
+      20% 85%,
+      70% 50%,
+      20% 15%);
+}
+
 
 @layer base {
   @keyframes fade-in-down {
@@ -328,16 +347,3 @@ body {
   }
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-

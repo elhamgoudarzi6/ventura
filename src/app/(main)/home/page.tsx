@@ -7,7 +7,6 @@ import Service3 from "./components/service3";
 // import Why from "./components/why";
 import Service from "./components/service";
 import Blogs from "./components/blog";
-// import Card from "./components/card";
 import Time from "./components/time";
 import CaseStudies from "./components/case";
 // import State from "./components/state";
@@ -30,7 +29,6 @@ const HomePage = () => {
       <Service3 />
       <Features/>
       <Time />
-      {/* <Card /> */}
       <Why />
       <Blogs />
       {/* <Partner /> */}
